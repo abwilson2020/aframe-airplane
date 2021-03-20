@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="js/physics.js"></script>
+    <link type="text/css" href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class = "overlay">
+        <p id = "airspeed">Airspeed: </p>
+        <p id = "thrust">Thrust: </p>
+        <p id = "pitch">Pitch: </p>
+        <p id = "roll">Roll: </p>
+        <p id = "altitude">Altitude: </p>
+    </div>
+    <div id = "compass" class = "compass-overlay"></div>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id = "airplane-mesh" src = "models/prop_plane.gltf"></a-asset-item>
+        </a-assets>
+         <a-entity environment="preset: forest" position = "0 0 0"></a-entity>
+        <a-entity id="rig" position="0 1.6 0 -3" custom-controls>
+          <a-entity id="camera" camera look-controls>
+            </a-entity>
+            <a-entity id = "airplane" gltf-model="#airplane-mesh" dynamic-body position = "0 -1.8 1.5" rotation = "0 180 0" billboard></a-entity>
+<!--            <a-entity gltf-model="#airplane" position = "12.65 -2 -2" rotation = "0 90 0" scale = "0.2 0.2 0.2" billboard></a-entity>-->
+        </a-entity>
+    </a-scene>
+    <script src="js/script.js"></script>
+</body>
+</html>

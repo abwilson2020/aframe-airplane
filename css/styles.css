@@ -1,0 +1,30 @@
+.overlay{
+    position: absolute;
+    z-index: 1000;
+    width: 300px;
+}
+.compass-overlay{
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%) scale(1.5);
+    width: 500px;
+    height: 50px;
+    background-image: url("../img/compass.png");
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: 1125px;
+    background-origin:content-box;
+}
+p{
+    height: 50px;
+    font-size: 25px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    line-height: 50px;
+    border: 2px solid black;
+    padding: 10px;
+    background: black;
+    color: white;
+}
